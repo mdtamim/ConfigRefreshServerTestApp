@@ -1,3 +1,8 @@
+server:
+  port: 8441
+  servlet:
+    contextPath: /configserver
+
 spring:
   application:
     name: ConfigRefreshServer
@@ -5,8 +10,9 @@ spring:
     config:
       server:
         git:
-          uri: //github url
-          username: mdtamim
-          password: dummypwd
+          uri: https://github.com/mdtamim/ConfigRefreshServerTestApp
           repos:
-            samplerepo
+            sampleRepo:
+              pattern: ConfigRefreshClient
+              searchPaths: 'src/main/resources'
+              uri: https://github.com/mdtamim/SpringConfigClienApp
