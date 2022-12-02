@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ConfigRefreshServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: //github url
+          username: mdtamim
+          password: dummypwd
+          repos:
+            samplerepo
